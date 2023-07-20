@@ -84,7 +84,7 @@ export default function Rewind({ params }: { params: { slug: string } }) {
               {index + 1}/{clips.data.length}
             </b>
             <iframe
-              src={clip.embed_url + "&parent=localhost"}
+              src={clip.embed_url + "&parent=" + window.location.hostname}
               width="960"
               height="540"
               allow="autoplay; fullscreen; picture-in-picture"

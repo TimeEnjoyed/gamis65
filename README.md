@@ -35,3 +35,10 @@ To run in production mode:
 npm run build
 npm run start
 ```
+
+### Docker:
+Copy .env.local somewhere, and fill in the client id/secret.
+```bash
+docker build -t gamis65-twitch-clip-rewind .
+docker run -p [local port]:3000/tcp -v [/path/to/].env.local:/app/.env.local -d gamis65-twitch-clip-rewind:latest
+```
