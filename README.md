@@ -21,7 +21,12 @@ cd twitch-clip-rewind
 npm install
 ```
 
-**Put your Twitch client ID and client secret into the `.env.local` file.**
+### Configuration
+Create a .env.local file in the root folder of this project like below, and enter your Twitch client id/secret:
+```
+CLIENT_ID="your client id"
+CLIENT_SECRET="your client secret"
+```
 
 ### How to run
 
@@ -37,8 +42,7 @@ npm run start
 ```
 
 ### Docker:
-Copy .env.local somewhere, and fill in the client id/secret.
 ```bash
 docker build -t gamis65-twitch-clip-rewind .
-docker run -p [local port]:3000/tcp -v [/path/to/].env.local:/app/.env.local -d gamis65-twitch-clip-rewind:latest
+docker run -p 3000:3000/tcp gamis65-twitch-clip-rewind
 ```
